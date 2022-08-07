@@ -26,18 +26,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 }
 
-// app.get('/', (request, response) => {
-//     response.sendFile(path.join(__dirname, './purple_hat/index.html'));
-// });
-// app.get('/getinvolved', (request, response) => {
-//     response.sendFile(path.join(__dirname, './purple_hat/getinvolved.html'));
-// });
-// app.get('/faq', (request, response) => {
-//     response.sendFile(path.join(__dirname, './purple_hat/faq.html'));
-// });
-// app.get('/form', (request, response) => {
-//     response.sendFile(path.join(__dirname, './purple_hat/form.html'));
-// });
 
 //new user input
 app.post("/contact", async (req, res) => {
