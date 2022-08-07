@@ -6,7 +6,7 @@ const HatCount = () => {
     
     const getCount = async () => {
       try {
-        const response = await fetch("http://localhost:3001/count");
+        const response = await fetch("/count");
         const jsonData = await response.json();  
         setCount(jsonData[0].hatcount);
 

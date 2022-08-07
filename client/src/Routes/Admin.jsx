@@ -20,7 +20,7 @@ const Admin = () => {
     e.preventDefault();
     try {
       const body = { username, password };
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

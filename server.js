@@ -11,12 +11,20 @@ const authorization = require("./middleware/authorization");
 
 const app = express();
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // app.use(express.static(path.join(__dirname, './purple_hat')));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+if (process.env.NODE_ENV === "production") {
+  //server static content
+  //npm run build
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
 
 // app.get('/', (request, response) => {
 //     response.sendFile(path.join(__dirname, './purple_hat/index.html'));

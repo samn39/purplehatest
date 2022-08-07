@@ -11,7 +11,7 @@ const ContactList = () => {
 
   const deleteContact = async (id) => {
     try {
-      const deleteContact = await fetch(`http://localhost:3001/contact/${id}`, {
+      const deleteContact = await fetch(`/contact/${id}`, {
         method: "DELETE",
       });
 
@@ -23,7 +23,7 @@ const ContactList = () => {
 
   const getContact = async () => {
     try {
-      const response = await fetch("http://localhost:3001/contact");
+      const response = await fetch("/contact");
       const jsonData = await response.json();
 
       setContact(jsonData);
