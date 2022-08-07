@@ -17,6 +17,7 @@ CREATE TABLE admin(
 CREATE TABLE count(
     id int,
     hatcount VARCHAR(50)
-    
 );
+
+INSERT INTO count (id, hatcount) VALUES (1, 777);
 
